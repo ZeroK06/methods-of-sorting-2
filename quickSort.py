@@ -1,3 +1,13 @@
+from random import sample
+# Importamos un Método de la biblioteca random para generar listas aleatorias
+
+lista = list(range(100))  # Creamos la lista base con números del 1 al 100
+
+# Creamos una lista aleatoria con sample
+# (8 elementos aleatorios de la lista base)
+vectorquick = sample(lista, 8)
+
+
 def quicksort(vectorquick, start=0, end=len(vectorquick) - 1):
     """Esta función ordenara el vector que le pases como argumento 
     con el Método Quick Sort"""
@@ -47,3 +57,6 @@ def quicksort(vectorquick, start=0, end=len(vectorquick) - 1):
 
     quick(vectorquick)
     print("El vector ordenado con quick es:", vectorquick)
+
+
+quicksort(vectorquick)

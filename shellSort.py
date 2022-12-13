@@ -1,3 +1,13 @@
+from random import sample
+# Importamos un Método de la biblioteca random para generar listas aleatorias
+
+lista = list(range(100))  # Creamos la lista base con números del 1 al 100
+
+# Creamos una lista aleatoria con sample
+# (8 elementos aleatorios de la lista base)
+vectorshell = sample(lista, 8)
+
+
 def shellsort(vectorshell):
     """Esta función ordenara el vector que le pases como argumento 
     con el Método Shell Sort"""
@@ -23,3 +33,6 @@ def shellsort(vectorshell):
             vectorshell[j] = val
         distancia //= 2  # Acotamos la distancia nuevamente y continua el ciclo
     print("El vector ordenado con shell es: ", vectorshell)
+
+
+shellsort(vectorshell)
