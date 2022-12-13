@@ -2,11 +2,11 @@ from random import sample
 from time import time
 # Importamos un Método de la biblioteca random para generar listas aleatorias
 
-lista = list(range(100))  # Creamos la lista base con números del 1 al 100
+lista = list(range(30000))  # Creamos la lista base con números del 1 al 100
 
 # Creamos una lista aleatoria con sample
 # (8 elementos aleatorios de la lista base)
-vectorbs = sample(lista, 8)
+vectorbs = sample(lista, 30000)
 
 datos = {
     "Nombre": "bubblesort",
@@ -21,7 +21,7 @@ def bubblesort(vectorbs):
     numInteraciones = 0
     numComparaciones = 0
     # Imprimimos la lista obtenida al principio (Desordenada)
-    print("El vector a ordenar es:", vectorbs)
+    #print("El vector a ordenar es:", vectorbs)
     n = 0  # Establecemos un contador del largo del vector
 
     for _ in vectorbs:
@@ -39,11 +39,11 @@ def bubblesort(vectorbs):
         numInteraciones += 1
     datos["numComparaciones"] = numComparaciones
     datos["numInteraciones"] = numInteraciones
-    print("El vector ordenado es: ", vectorbs)
+    #print("El vector ordenado es: ", vectorbs)
 
 
-firstTime = time().
+firstTime = time()
 bubblesort(vectorbs)
-lastTime = int(time() * 1000)
+lastTime = time()
 datos["tiempo"] = lastTime - firstTime
 print(datos)
